@@ -6,13 +6,27 @@ The model is explanatory and synthetic. It is not calibrated to any country.
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
+import hashlib
 from math import exp
-from random import Random
 from typing import Dict, Iterable, List, Tuple
 
 
 def clip(value: float, lower: float = 0.0, upper: float = 1.0) -> float:
     return max(lower, min(upper, value))
+
+
+def stable_normal(seed: int, step: int, stream: str) -> float:
+    """Return a deterministic, approximately standard-normal shock.
+
+    Twelve SHA-256-derived uniforms form an Irwin-Hall approximation. This
+    avoids platform-dependent pseudorandom Gaussian implementations.
+    """
+    total = 0.0
+    for index in range(12):
+        payload = f"{seed}:{step}:{stream}:{index}".encode("ascii")
+        integer = int.from_bytes(hashlib.sha256(payload).digest()[:8], "big")
+        total += integer / 18446744073709551616
+    return total - 6.0
 
 
 @dataclass(frozen=True)
@@ -111,13 +125,12 @@ def capability_update(capability: float, x: float, p: float, e: float, q: float,
 def simulate(scenario: str, seed: int, endogenous: bool = True,
              params: Parameters | None = None) -> List[Dict[str, float]]:
     params = params or Parameters()
-    rng = Random(seed)
     x = params.initial_protection_share
     capability = params.initial_capability
     rows: List[Dict[str, float]] = []
     for step in range(params.steps + 1):
         p, e, q = policy(scenario, min(step, params.steps - 1), params.steps)
-        payoff_shock = rng.gauss(0.0, params.shock_sd)
+        payoff_shock = stable_normal(seed, step, "payoff") * params.shock_sd
         productive, protective = payoffs(x, capability, p, e, q, params, payoff_shock)
         output = capability * (1.0 - x) + params.protected_activity * p * x
         rows.append({
@@ -135,7 +148,7 @@ def simulate(scenario: str, seed: int, endogenous: bool = True,
             break
         next_x = selection_update(x, productive, protective, params)
         if endogenous:
-            cap_shock = rng.gauss(0.0, params.capability_shock_sd)
+            cap_shock = stable_normal(seed, step, "capability") * params.capability_shock_sd
             capability = capability_update(capability, x, p, e, q, params, cap_shock)
         else:
             capability = params.initial_capability

@@ -70,3 +70,7 @@ The EPT mapping is conditional. The candidate transmissible package is the repre
 ## Causal ceiling
 
 The simulation establishes internal sufficiency only: under the declared equations and parameters, the mechanism can or cannot generate a pattern. It does not identify a causal effect, validate a construct, predict a country, or justify a policy.
+
+## Stable shocks
+
+Payoff and capability shocks use an Irwin-Hall approximation built from twelve SHA-256-derived uniform values. This avoids platform-dependent Gaussian pseudorandom implementations while preserving declared, mean-zero variation for every seed, step, and stream.

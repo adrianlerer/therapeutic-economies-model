@@ -1,8 +1,6 @@
-import tempfile
 import unittest
-from pathlib import Path
 
-from therapeutic_economies import Parameters, SCENARIOS, inversion, policy, simulate
+from therapeutic_economies import Parameters, SCENARIOS, inversion, policy, simulate, stable_normal
 
 
 class ModelTests(unittest.TestCase):
@@ -17,6 +15,9 @@ class ModelTests(unittest.TestCase):
 
     def test_deterministic_seed(self):
         self.assertEqual(simulate("conditional_support", 42), simulate("conditional_support", 42))
+
+    def test_stable_shock_contract(self):
+        self.assertEqual(stable_normal(0, 0, "payoff"), 0.3511140980085141)
 
     def test_fixed_baseline_capability_is_constant(self):
         params = Parameters()

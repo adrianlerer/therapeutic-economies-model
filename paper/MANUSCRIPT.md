@@ -148,7 +148,7 @@ The model compares four stylized schedules over 120 steps:
 
 For each regime, the endogenous model is paired with a fixed-capability baseline. Both versions share initial states, schedules, seeds, payoff shocks, selection rule, and output equation. They differ only in whether \(c_t\) evolves. The baseline isolates the feedback contributed by endogenous capability rather than serving as a realistic counterfactual economy.
 
-The initial protection-seeking share is 0.30 and initial capability is 0.62. Two hundred seeds are run for every scenario-model pair. Seeds drive declared Gaussian payoff and capability shocks. Because Python's standard pseudorandom generator and every parameter are committed in the repository, the experiment is exactly reproducible in the tested environment without external data or packages.
+The initial protection-seeking share is 0.30 and initial capability is 0.62. Two hundred seeds are run for every scenario-model pair. Seeds drive declared payoff and capability shocks. Each shock is an Irwin-Hall approximation constructed from twelve SHA-256-derived uniforms. This avoids platform-dependent Gaussian pseudorandom implementations. Every parameter is committed, so the experiment is exactly reproducible in the tested environment without external data or packages.
 
 The activity proxy is
 
@@ -168,18 +168,18 @@ The test suite checks state bounds, deterministic replication, baseline capabili
 
 ### 5.1 Reference parameterization
 
-Under unconditional protection with endogenous capability, the mean final protection-seeking share is 0.989 and mean final capability is 0.007. All 200 runs satisfy the inversion diagnostic. In the fixed-capability baseline, the share also rises, to 0.954, but capability remains at 0.620 by construction and inversion is therefore absent. This comparison shows why a strategy-only model misses part of the proposed mechanism: protection can change not only which strategy is frequent but also the stock on which subsequent productive adaptation depends.
+Under unconditional protection with endogenous capability, the mean final protection-seeking share is 0.989 and mean final capability is 0.008. All 200 runs satisfy the inversion diagnostic. In the fixed-capability baseline, the share also rises, to 0.954, but capability remains at 0.620 by construction and inversion is therefore absent. This comparison shows why a strategy-only model misses part of the proposed mechanism: protection can change not only which strategy is frequent but also the stock on which subsequent productive adaptation depends.
 
 Conditional support produces the opposite pattern. The mean final protection-seeking share is 0.0076 and capability reaches the upper model boundary. Open exposure yields a similar result, as does the final phase of the sequenced transition. These boundary values are deliberately reported rather than cosmetically rescaled. They reveal that the reference equations generate strong attractors over a long stylized horizon.
 
 | Scenario | Model | Final P share | Final capability | Cumulative activity proxy | Inversion frequency |
 |---|---|---:|---:|---:|---:|
-| Unconditional protection | Endogenous | 0.9894 | 0.0075 | 51.50 | 1.00 |
-| Unconditional protection | Fixed | 0.9536 | 0.6200 | 53.87 | 0.00 |
+| Unconditional protection | Endogenous | 0.9893 | 0.0078 | 51.49 | 1.00 |
+| Unconditional protection | Fixed | 0.9535 | 0.6200 | 53.84 | 0.00 |
 | Conditional support | Endogenous | 0.0076 | 1.0000 | 116.30 | 0.00 |
 | Conditional support | Fixed | 0.0088 | 0.6200 | 74.50 | 0.00 |
-| Open exposure | Endogenous | 0.0072 | 1.0000 | 115.51 | 0.00 |
-| Sequenced transition | Endogenous | 0.0072 | 1.0000 | 80.04 | 0.00 |
+| Open exposure | Endogenous | 0.0071 | 1.0000 | 115.51 | 0.00 |
+| Sequenced transition | Endogenous | 0.0072 | 1.0000 | 79.60 | 0.00 |
 
 The activity proxy does not establish that open exposure maximizes social welfare. It excludes adjustment costs, distribution, unemployment, market power, strategic capacity, and many other policy-relevant variables. The result is narrower: within the specified mechanism, regimes that make capability valuable and protection contestable select differently from unconditional protection.
 
