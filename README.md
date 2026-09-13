@@ -20,7 +20,7 @@ python3 run_experiments.py --seeds 200 --output results
 python3 verify_release.py --check
 ```
 
-The exact release environment used Python 3.14.0 on macOS. Continuous integration independently reproduces the artifacts on Python 3.12/Linux.
+The exact release environment used Python 3.14.0 on macOS. Continuous integration independently reproduces the artifacts on Python 3.14/Linux. The minor runtime version is pinned because pseudorandom and float serialization details need not be byte-identical across Python releases.
 
 Generated artifacts:
 

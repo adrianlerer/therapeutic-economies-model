@@ -6,7 +6,7 @@ authors:
   - family-names: Lerer
     given-names: Ignacio Adrián
     orcid: "https://orcid.org/0009-0007-6378-9749"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-09-13
 license: MIT
 repository-code: "https://github.com/adrianlerer/therapeutic-economies-model"
