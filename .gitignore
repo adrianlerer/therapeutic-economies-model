@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 paper/pdf-render/
 paper/*.zip
+publications/

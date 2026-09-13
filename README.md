@@ -2,6 +2,8 @@
 
 Reproducible simulation accompanying Ignacio Adrián Lerer's theoretical-computational preprint, *Therapeutic Economies: Protective Selection, Endogenous Capabilities, and Institutional Dependence*.
 
+Published preprint: [https://doi.org/10.5281/zenodo.22737505](https://doi.org/10.5281/zenodo.22737505)
+
 The manuscript is available as [Markdown](paper/MANUSCRIPT.md), [PDF](paper/Therapeutic_Economies_Preprint.pdf), and [DOCX](paper/Therapeutic_Economies_Preprint.docx). The source and claim boundary is documented in [the audit ledger](paper/SOURCE_AND_CLAIM_AUDIT.md).
 
 ## Research question
@@ -52,7 +54,7 @@ This repository contains synthetic code and generated data only. It excludes cop
 
 ## License and citation
 
-Code is released under the MIT License. Paper text and documentation are released under CC BY 4.0; see `LICENSE-CONTENT`. Citation metadata is in `CITATION.cff`.
+Code is released under the MIT License. Paper text and documentation are released under CC BY 4.0; see `LICENSE-CONTENT`. Citation metadata is in `CITATION.cff`. Please cite the versioned Zenodo preprint as: Lerer, I. A. (2026), *Therapeutic Economies: Protective Selection, Endogenous Capabilities, and Institutional Dependence*, version 1.0.3, Zenodo, DOI: 10.5281/zenodo.22737505.
 
 ## Author
 

@@ -10,3 +10,14 @@ version: 1.0.3
 date-released: 2026-09-13
 license: MIT
 repository-code: "https://github.com/adrianlerer/therapeutic-economies-model"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Lerer
+      given-names: Ignacio Adrián
+      orcid: "https://orcid.org/0009-0007-6378-9749"
+  title: "Therapeutic Economies: Protective Selection, Endogenous Capabilities, and Institutional Dependence"
+  year: 2026
+  version: 1.0.3
+  publisher: Zenodo
+  doi: "10.5281/zenodo.22737505"
