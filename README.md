@@ -20,7 +20,7 @@ python3 run_experiments.py --seeds 200 --output results
 python3 verify_release.py --check
 ```
 
-The exact release environment used Python 3.14.0 on macOS. Continuous integration independently reproduces the artifacts on Python 3.14/Linux. Shocks are derived from SHA-256 rather than a platform-dependent Gaussian pseudorandom implementation.
+The exact release environment used Python 3.14.0 on macOS. Continuous integration independently reproduces the result tables on Python 3.14/Linux with an absolute numerical tolerance of `1e-10`. Release hashes establish artifact integrity within the release environment; cross-platform byte identity is not claimed because standard-library transcendental functions can differ at machine precision. Shocks are derived from SHA-256 rather than a platform-dependent Gaussian pseudorandom implementation.
 
 Generated artifacts:
 

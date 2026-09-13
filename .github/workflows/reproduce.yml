@@ -13,5 +13,7 @@ jobs:
         with:
           python-version: "3.14"
       - run: python -m unittest discover -s tests -v
+      - run: cp -R results "$RUNNER_TEMP/reference-results"
       - run: python run_experiments.py --seeds 200 --output results
-      - run: python verify_release.py --check
+      - run: python verify_release.py
+      - run: python scripts/compare_results.py "$RUNNER_TEMP/reference-results" results --tolerance 1e-10

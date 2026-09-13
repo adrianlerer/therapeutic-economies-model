@@ -160,7 +160,7 @@ It distinguishes capability-supported activity from protected activity. It is no
 
 ### 4.2 Reproducibility and integrity controls
 
-The public repository contains source code, tests, generated CSV and JSON data, a dependency-free SVG figure, a machine-readable citation file, and SHA-256 hashes. Continuous integration reruns unit tests, regenerates the experiment, and compares artifacts with the committed checksum manifest. The release excludes copyrighted books, extracted EPUB text, private research notes, credentials, and unpublished operational methods.
+The public repository contains source code, tests, generated CSV and JSON data, a dependency-free SVG figure, a machine-readable citation file, and SHA-256 hashes. Continuous integration reruns unit tests and regenerates the experiment on Linux, comparing all result tables with the committed references at an absolute numerical tolerance of \(10^{-10}\). Hashes establish artifact integrity in the release environment; cross-platform byte identity is not claimed because standard-library transcendental functions can differ at machine precision. The release excludes copyrighted books, extracted EPUB text, private research notes, credentials, and unpublished operational methods.
 
 The test suite checks state bounds, deterministic replication, baseline capability, policy schedules, the inversion diagnostic, and positive and negative cases. During development, the first diagnostic inspected only a late window. That produced a false negative because capability collapse changed relative payoffs near the boundary after the selection process had already generated the trap. The released diagnostic evaluates the declared full horizon, and a regression test preserves that correction.
 
