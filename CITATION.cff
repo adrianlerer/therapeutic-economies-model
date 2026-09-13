@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this model, please cite the accompanying preprint."
+title: "Therapeutic Economies Model"
+type: software
+authors:
+  - family-names: Lerer
+    given-names: Ignacio Adrián
+    orcid: "https://orcid.org/0009-0007-6378-9749"
+version: 1.0.0
+date-released: 2026-09-13
+license: MIT
+repository-code: "https://github.com/adrianlerer/therapeutic-economies-model"

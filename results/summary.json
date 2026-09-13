@@ -1,0 +1,110 @@
+{
+  "parameters": {
+    "base_learning": 0.15,
+    "capability_return": 0.9,
+    "capability_shock_sd": 0.003,
+    "conditional_capability": 0.022,
+    "conditional_learning": 0.34,
+    "dependency_damage": 0.048,
+    "depreciation": 0.012,
+    "exposure_cost": 0.2,
+    "exposure_learning": 0.72,
+    "exposure_penalty": 0.38,
+    "exposure_return": 0.42,
+    "formation_rate": 0.032,
+    "initial_capability": 0.62,
+    "initial_protection_share": 0.3,
+    "mutation_rate": 0.006,
+    "productive_base": 0.1,
+    "protected_activity": 0.48,
+    "protection_base": 0.04,
+    "protection_return": 0.95,
+    "review_penalty": 0.52,
+    "selection_strength": 1.25,
+    "shock_sd": 0.018,
+    "steps": 120
+  },
+  "seeds": 200,
+  "summary": [
+    {
+      "cumulative_output_mean": 51.49733914073812,
+      "final_capability_mean": 0.007457833281084015,
+      "final_capability_sd": 0.005915526817657184,
+      "final_protection_share_mean": 0.9893749155398648,
+      "final_protection_share_sd": 0.0002367896991303399,
+      "inversion_frequency": 1.0,
+      "model": "endogenous",
+      "scenario": "unconditional_protection"
+    },
+    {
+      "cumulative_output_mean": 53.86602203754935,
+      "final_capability_mean": 0.62,
+      "final_capability_sd": 0.0,
+      "final_protection_share_mean": 0.9536190483750216,
+      "final_protection_share_sd": 0.003809821762046897,
+      "inversion_frequency": 0.0,
+      "model": "fixed",
+      "scenario": "unconditional_protection"
+    },
+    {
+      "cumulative_output_mean": 116.30354296456761,
+      "final_capability_mean": 1.0,
+      "final_capability_sd": 0.0,
+      "final_protection_share_mean": 0.007592191332803381,
+      "final_protection_share_sd": 7.112585927076575e-05,
+      "inversion_frequency": 0.0,
+      "model": "endogenous",
+      "scenario": "conditional_support"
+    },
+    {
+      "cumulative_output_mean": 74.4954569844476,
+      "final_capability_mean": 0.62,
+      "final_capability_sd": 0.0,
+      "final_protection_share_mean": 0.008823967125433986,
+      "final_protection_share_sd": 0.00013343224146099405,
+      "inversion_frequency": 0.0,
+      "model": "fixed",
+      "scenario": "conditional_support"
+    },
+    {
+      "cumulative_output_mean": 115.5064953435916,
+      "final_capability_mean": 1.0,
+      "final_capability_sd": 0.0,
+      "final_protection_share_mean": 0.007150408224962637,
+      "final_protection_share_sd": 5.07934103799513e-05,
+      "inversion_frequency": 0.0,
+      "model": "endogenous",
+      "scenario": "open_exposure"
+    },
+    {
+      "cumulative_output_mean": 74.23132444574613,
+      "final_capability_mean": 0.62,
+      "final_capability_sd": 0.0,
+      "final_protection_share_mean": 0.007952042990772039,
+      "final_protection_share_sd": 9.005576391226838e-05,
+      "inversion_frequency": 0.0,
+      "model": "fixed",
+      "scenario": "open_exposure"
+    },
+    {
+      "cumulative_output_mean": 80.03561349928349,
+      "final_capability_mean": 1.0,
+      "final_capability_sd": 0.0,
+      "final_protection_share_mean": 0.007180232105067662,
+      "final_protection_share_sd": 5.214928669465694e-05,
+      "inversion_frequency": 0.0,
+      "model": "endogenous",
+      "scenario": "sequenced_transition"
+    },
+    {
+      "cumulative_output_mean": 72.95248241844006,
+      "final_capability_mean": 0.62,
+      "final_capability_sd": 0.0,
+      "final_protection_share_mean": 0.008008515143613849,
+      "final_protection_share_sd": 9.279691433679161e-05,
+      "inversion_frequency": 0.0,
+      "model": "fixed",
+      "scenario": "sequenced_transition"
+    }
+  ]
+}

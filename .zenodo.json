@@ -1,0 +1,27 @@
+{
+  "title": "Therapeutic Economies: Protective Selection, Endogenous Capabilities, and Institutional Dependence",
+  "description": "A theoretical-computational preprint and dependency-free evolutionary simulation of protective selection inversion. The model examines when institutional protection can make protection-seeking locally adaptive while productive capability declines. This is an existence proof, not an empirical estimate or validation for Argentina or any real economy.",
+  "creators": [
+    {
+      "name": "Lerer, Ignacio Adrián",
+      "orcid": "0009-0007-6378-9749",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "publication",
+  "publication_type": "workingpaper",
+  "access_right": "open",
+  "keywords": [
+    "evolutionary game theory",
+    "extended evolutionary theory",
+    "institutional dependence",
+    "capability formation",
+    "soft budget constraints",
+    "industrial policy",
+    "therapeutic culture",
+    "policy conditionality"
+  ],
+  "language": "eng",
+  "version": "1.0.0"
+}
